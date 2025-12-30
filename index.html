@@ -53,5 +53,37 @@ button {
   color: #4a0018;
 }
 
-#letter
+#letter h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+</style>
+</head>
 
+<body>
+
+<div class="side left">iyi ki varsın</div>
+<div class="side right">iyi ki varsın</div>
+
+<button id="openBtn" onclick="openLetter()">tıkla</button>
+
+<div id="letter">
+  <h2>canım</h2>
+  <p>
+    bu satırları okurken belki gülümsüyorsundur  
+    ama bilmeni istedim  
+    hayatımda olduğun her gün benim için çok kıymetli  
+    iyi ki varsın iyi ki benimlesin  
+    yeni yılda da seninle olmak istiyorum
+  </p>
+</div>
+
+<script>
+function openLetter() {
+  document.getElementById("openBtn").style.display = "none";
+  document.getElementById("letter").style.display = "block";
+}
+</script>
+
+</body>
+</html>
