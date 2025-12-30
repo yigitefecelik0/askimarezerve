@@ -5,77 +5,53 @@
 <title>İyi ki Varsın</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap');
+
 body {
   margin: 0;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffffff;
+  background: #ffe6eb; /* açık pembe */
 }
 
 .side {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
-  color: #c40000;
-  font-weight: bold;
+  font-size: 18px;
+  color: #b0003a;
+  font-family: 'Playfair Display', serif;
 }
 
 .left {
-  left: 20px;
+  left: 25px;
 }
 
 .right {
-  right: 20px;
+  right: 25px;
 }
 
 button {
-  padding: 15px 35px;
-  font-size: 18px;
+  padding: 14px 34px;
+  font-size: 17px;
   cursor: pointer;
   border: none;
-  background: #c40000;
+  background: #b0003a;
   color: white;
-  border-radius: 6px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
 }
 
 #letter {
   display: none;
-  max-width: 500px;
+  max-width: 520px;
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.8;
+  color: #4a0018;
 }
-</style>
-</head>
 
-<body>
+#letter
 
-<div class="side left">iyi ki varsın</div>
-<div class="side right">iyi ki varsın</div>
-
-<button id="openBtn" onclick="openLetter()">tıkla</button>
-
-<div id="letter">
-  <h2>canım</h2>
-  <p>
-    bu satırları okurken belki gülümsüyorsundur  
-    belki de şaşırmışsındır  
-    ama bilmeni istedim  
-    bu yılın bana kattığı en güzel şey sensin  
-    iyi ki varsın iyi ki benimlesin  
-    yeni yılda da yanımda olmanı istiyorum
-  </p>
-</div>
-
-<script>
-function openLetter() {
-  document.getElementById("openBtn").style.display = "none";
-  document.getElementById("letter").style.display = "block";
-}
-</script>
-
-</body>
-</html>
