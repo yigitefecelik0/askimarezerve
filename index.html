@@ -57,7 +57,7 @@ button {
 
 <body>
 
-<!-- MÜZİK KISMI BURADA -->
+<!-- MÜZİK BURADA (aynı klasöre sarki.mp3 yükle) -->
 <audio id="bgMusic">
   <source src="sarki.mp3" type="audio/mpeg">
 </audio>
@@ -65,7 +65,7 @@ button {
 <div class="side left">Hanıma bi show</div>
 <div class="side right">yapalım dedik</div>
 
-<button id="openBtn" onclick="openLetter()">tıkla</button>
+<button id="openBtn">tıkla</button>
 
 <div id="letter">
   <h2>canım</h2>
@@ -90,11 +90,16 @@ button {
 </div>
 
 <script>
-function openLetter() {
-  document.getElementById("openBtn").style.display = "none";
-  document.getElementById("letter").style.display = "block";
-}
+window.onload = function() {
 
-// BUTONA TIKLANCA MÜZİK BAŞLASIN
-document.getElementById("openBtn").addEventListener("click", function() {
-  document.g
+  document.getElementById("openBtn").onclick = function() {
+    document.getElementById("openBtn").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("bgMusic").play();
+  }
+
+}
+</script>
+
+</body>
+</html>
