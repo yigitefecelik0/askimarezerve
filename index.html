@@ -57,7 +57,8 @@ button {
 
 <body>
 
-<audio id="bgMusic" autoplay loop>
+<!-- MÜZİK KISMI BURADA -->
+<audio id="bgMusic">
   <source src="sarki.mp3" type="audio/mpeg">
 </audio>
 
@@ -93,7 +94,7 @@ function openLetter() {
   document.getElementById("openBtn").style.display = "none";
   document.getElementById("letter").style.display = "block";
 }
-</script>
 
-</body>
-</html>
+// BUTONA TIKLANCA MÜZİK BAŞLASIN
+document.getElementById("openBtn").addEventListener("click", function() {
+  document.g
