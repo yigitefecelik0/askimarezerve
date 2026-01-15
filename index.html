@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #ffe6eb;
+  flex-direction: column;
 }
 
 .side {
@@ -57,18 +58,14 @@ button {
 
 <body>
 
-<!-- MÜZİK (aynı klasörde sarki.mp3 olmalı!) -->
-<audio id="bgMusic">
-  <source src="sarki.mp3" type="audio/mpeg">
-</audio>
-
 <div class="side left">Hanıma bi show</div>
 <div class="side right">yapalım dedik</div>
 
-<button id="openBtn">tıkla</button>
+<button id="openBtn" onclick="openLetter()">tıkla</button>
 
 <div id="letter">
   <h2>canım</h2>
+
   <p>
     bu satırları okuyabilmen için iki saat boyunca html ve github öğrendim  
     çünkü mühendis ruhlu bir sevgilin var  
@@ -78,38 +75,40 @@ button {
     herkes yeni yıla girer  
     ben ise seninle yıllara girmek istiyorum sevgilim  
     ----------------------------------------  
+    ----------------------------------------  
     bakıyorum da yine karşılaştık sevgilimle  
-    yani aşık olduğum kadınla  
+    yani aşık olduğum kadınla her neyse  
     seni çok seviyorum sadece yılbaşı hediyesi değil bu site  
     senin bana her gün yaşattıkların gibi... var olman mesela :))  
     yazılılarım da bitti artık senle çok daha fazla ilgilenebilicem hehe  
     tekrardan senin yanında olmadığım öperek ısırarak uyutamadığım geceleri sikeyim  
     iyi geceler sevgilim seni çok seviyorum askımmmmmmmmmmmmmmmmmmmmm  
-    https://open.spotify.com/intl-tr/track/0UKobSkffKLNwJy6hTD85C?si=013eff1bc99a4fad
   </p>
+
+  <br>
+
+  <!-- SPOTIFY BUTONU -->
+  <a href="https://open.spotify.com/intl-tr/track/0UKobSkffKLNwJy6hTD85C?si=013eff1bc99a4fad"
+     target="_blank"
+     style="background:#1DB954; padding:12px 25px; color:white; border-radius:30px; text-decoration:none; font-size:18px;">
+     Şarkıyı Aç (Spotify)
+  </a>
+
+  <br><br>
+
+  <!-- SPOTIFY GÖMÜLÜ ÇALAR -->
+  <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/0UKobSkffKLNwJy6hTD85C?utm_source=generator"
+    width="300" height="80" frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+
 </div>
 
 <script>
-window.onload = function() {
-
-  document.getElementById("openBtn").addEventListener("click", function () {
-
-    // buton kaybolsun
-    document.getElementById("openBtn").style.display = "none";
-
-    // mektup görünsün
-    document.getElementById("letter").style.display = "block";
-
-    // müziği oynat
-    let audio = document.getElementById("bgMusic");
-    audio.volume = 1.0;
-
-    audio.play().catch(err => {
-      console.log("Müzik engellendi:", err);
-    });
-
-  });
-
+function openLetter() {
+  document.getElementById("openBtn").style.display = "none";
+  document.getElementById("letter").style.display = "block";
 }
 </script>
 
