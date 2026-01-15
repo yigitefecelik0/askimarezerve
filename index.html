@@ -58,11 +58,6 @@ button {
 
 <body>
 
-<!-- MÜZİK (Sessiz başlar, butona basınca ses açılır) -->
-<audio id="bgmusic" autoplay loop muted>
-  <source src="sarki.mp3" type="audio/mpeg">
-</audio>
-
 <div class="side left">Hanıma bi show</div>
 <div class="side right">yapalım dedik</div>
 
@@ -89,17 +84,31 @@ button {
     tekrardan senin yanında olmadığım öperek ısırarak uyutamadığım geceleri sikeyim  
     iyi geceler sevgilim seni çok seviyorum askımmmmmmmmmmmmmmmmmmmmm  
   </p>
+
+  <br>
+
+  <!-- SPOTIFY BUTONU -->
+  <a href="https://open.spotify.com/intl-tr/track/0UKobSkffKLNwJy6hTD85C?si=013eff1bc99a4fad"
+     target="_blank"
+     style="background:#1DB954; padding:12px 25px; color:white; border-radius:30px; text-decoration:none; font-size:15px;">
+     Buradan devam edelim askım
+  </a>
+
+  <br><br>
+
+  <!-- SPOTIFY GÖMÜLÜ ÇALAR -->
+  <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/0UKobSkffKLNwJy6hTD85C?utm_source=generator"
+    width="300" height="80" frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+
 </div>
 
 <script>
 function openLetter() {
   document.getElementById("openBtn").style.display = "none";
   document.getElementById("letter").style.display = "block";
-
-  // Ses açma
-  const music = document.getElementById("bgmusic");
-  music.muted = false; 
-  music.play();
 }
 </script>
 
